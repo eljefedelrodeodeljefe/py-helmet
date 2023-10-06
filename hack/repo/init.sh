@@ -17,6 +17,7 @@ git branch -M main
 gh secret set PERSONAL_TOKEN --body "$GH_TOKEN"
 gh secret set PYPI_API_TOKEN --body "$PYPI_API_TOKEN"
 gh secret set TEST_PYPI_API_TOKEN --body "$TEST_PYPI_API_TOKEN"
+gh secret set CODECOV_TOKEN --body "$CODECOV_TOKEN"
 
 # uncomment the following if you need to setup email notification
 # gh secret set BUILD_NOTIFY_MAIL_SERVER --body $BUILD_NOTIFY_MAIL_SERVER
