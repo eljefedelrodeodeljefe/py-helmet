@@ -103,7 +103,9 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ```
     $ pytest tests.test_py_helmet
-```To run a subset of tests.
+```
+
+To run a subset of tests.
 
 
 ## Deploying
@@ -119,3 +121,19 @@ $ git push --tags
 ```
 
 Github Actions will then deploy to PyPI if tests pass.
+
+## Developing CI
+
+The repo supports developing CI changes locally with [`act`](https://github.com/nektos/act#overview----)
+
+Run the pusg event:
+
+```console
+act
+```
+
+Run a specific job:
+
+```
+act -j publish_dev_build -W .github/workflows/dev.yml
+```

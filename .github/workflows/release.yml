@@ -6,7 +6,7 @@ name: build & release
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branch: [main, master]
+    branches: [main]
     tags:
       - 'v*'
 
@@ -59,7 +59,7 @@ jobs:
           echo "package_version=`poetry version --short`" >> $GITHUB_OUTPUT
         shell: bash
 
-      - name: publish documentation
+      - name: Publish Documentation
         run: |
           poetry install -E doc
           mkdocs build
