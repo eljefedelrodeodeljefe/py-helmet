@@ -15,6 +15,12 @@
     <img src="https://img.shields.io/website/https/eljefedelrodeodeljefe.github.io/py-helmet/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
 </a>
 
+
+<a href="https://codecov.io/gh/eljefedelrodeodeljefe/py-helmet" >
+<img src="https://codecov.io/gh/eljefedelrodeodeljefe/py-helmet/graph/badge.svg?token=DDO7VY44OM"/>
+</a>
+
+
 </p>
 
 
