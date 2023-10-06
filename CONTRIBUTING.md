@@ -46,13 +46,13 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `py_helmet` for local development.
+Ready to contribute? Here's how to set up `py-helmet` for local development.
 
-1. Fork the `py_helmet` repo on GitHub.
+1. Fork the `py-helmet` repo on GitHub.
 2. Clone your fork locally
 
 ```
-    $ git clone git@github.com:your_name_here/py_helmet.git
+    $ git clone git@github.com:your_name_here/py-helmet.git
 ```
 
 3. Ensure [poetry](https://python-poetry.org/docs/) is installed.
@@ -99,7 +99,9 @@ Before you submit a pull request, check that it meets these guidelines:
    https://github.com/eljefedelrodeodeljefe/py-helmet/actions
    and make sure that the tests pass for all supported Python versions.
 
-## Tips```
+## Tips
+
+```
     $ pytest tests.test_py_helmet
 ```To run a subset of tests.
 
