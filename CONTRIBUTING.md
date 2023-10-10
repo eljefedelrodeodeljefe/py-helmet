@@ -60,6 +60,7 @@ Ready to contribute? Here's how to set up `py-helmet` for local development.
 
 ```
     $ poetry install -E test -E doc -E dev
+    $ poetry shell
 ```
 
 5. Create a branch for local development:

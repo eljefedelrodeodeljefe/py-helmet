@@ -1,4 +1,4 @@
-name: "Develop: build CI"
+name: "Develop: Build CI"
 
 # Controls when the action will run.
 on:
@@ -11,6 +11,7 @@ on:
       - '*'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
 
 # contains 3 jobs: test, publish_dev_build and notification
 jobs:
@@ -69,6 +70,21 @@ jobs:
             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   publish_dev_build:
+    permissions:
+    #   actions: read|write|none
+    #   checks: read|write|none
+      contents: write
+    #   id-token: read
+    #   deployments: read|write|none
+      issues: write
+    #   discussions: read|write|none
+    #   packages: read|write|none
+      pages: write
+    #   pull-requests: read|write|none
+    #   repository-projects: read|write|none
+    #   security-events: read|write|none
+    #   statuses: read|write|none
+
     name: "Publish build to Test Pypi and Build Docs"
     # if test failed, we should not publish
     needs: test
@@ -92,8 +108,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install tox tox-gh-actions
           poetry install -E doc -E dev --no-interaction
-
-          source .venv/bin/activate
 
       - name: Build Documentation
         run: |
