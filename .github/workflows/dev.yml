@@ -97,6 +97,8 @@ jobs:
 
       - name: Build Documentation
         run: |
+          source .venv/bin/activate
+
           mkdocs build
           git config --global user.name Docs deploy
           git config --global user.email docs@py-helmet.pkg
