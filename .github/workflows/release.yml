@@ -70,7 +70,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install tox-gh-actions poetry
-          poetry install -E doc
+          poetry install -E doc -E dev --no-interaction
 
         # declare package_version, repo_owner, repo_name, package_name so you may use it in web hooks.
       - name: Declare variables for convenient use
