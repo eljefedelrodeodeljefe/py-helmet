@@ -59,7 +59,7 @@ jobs:
         with:
           python-version: ${{ env.python-version }}
 
-      - name: Install and configure Poetry
+      - name: Install and Configure Poetry
         uses: snok/install-poetry@v1
         with:
           virtualenvs-create: true
@@ -70,10 +70,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install tox-gh-actions
-          poetry install -E doc -E dev --no-interaction
+
+      - name: Install Poetry Dependencies
+        run: |
+          poetry install --no-interaction --no-root
+          poetry install --no-interaction
 
         # declare package_version, repo_owner, repo_name, package_name so you may use it in web hooks.
-      - name: Declare variables for convenient use
+      - name: Declare Variables for Convenient Use
         id: variables_step
         run: |
           echo "repo_owner=${GITHUB_REPOSITORY%/*}" >> $GITHUB_OUTPUT
@@ -97,20 +101,18 @@ jobs:
           poetry lock
           poetry build
 
-      - name: Semantic Release
-        run: |
-          source .venv/bin/activate
-
-          semantic-release publish
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Python Semantic Release
+        uses: python-semantic-release/python-semantic-release@v8.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          vcs_release: "false"
 
       - name: Publish to PYPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
-          skip_existing: true
+          skip-existing: true
 
   notification:
     needs: release
