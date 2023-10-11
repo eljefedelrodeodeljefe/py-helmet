@@ -2,6 +2,31 @@
 
 
 
+## v0.1.1 (2023-10-11)
+
+### Fix
+
+* fix(ci): install all deps
+
+Signed-off-by: Robert Jefe Lindstaedt &lt;robert.lindstaedt@gmail.com&gt; ([`a0dec76`](https://github.com/eljefedelrodeodeljefe/py-helmet/commit/a0dec769187307c8856a0296425fa9858039ad9b))
+
+* fix(ci): use ci provided poetry
+
+Signed-off-by: Robert Jefe Lindstaedt &lt;robert.lindstaedt@gmail.com&gt; ([`4badce4`](https://github.com/eljefedelrodeodeljefe/py-helmet/commit/4badce4a1b13042451d92a8ce34e37ad6ff9c63c))
+
+* fix(ci): do install dev deps
+
+Signed-off-by: Robert Jefe Lindstaedt &lt;robert.lindstaedt@gmail.com&gt; ([`36fa85e`](https://github.com/eljefedelrodeodeljefe/py-helmet/commit/36fa85eaf576ef34b3f47d86972603eb5aa5f835))
+
+* fix(ci): bind correct gh token
+
+Signed-off-by: Robert Jefe Lindstaedt &lt;robert.lindstaedt@gmail.com&gt; ([`5a2ebbb`](https://github.com/eljefedelrodeodeljefe/py-helmet/commit/5a2ebbbd3406bd2e44cde17cf69d8e2f884215c5))
+
+* fix(ci): add proper semantic release run
+
+Signed-off-by: Robert Jefe Lindstaedt &lt;robert.lindstaedt@gmail.com&gt; ([`9416006`](https://github.com/eljefedelrodeodeljefe/py-helmet/commit/9416006a8ddc23eff38a3113d1b119ced893b96b))
+
+
 ## v0.1.0 (2023-10-10)
 
 ### Feature
