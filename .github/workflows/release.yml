@@ -103,7 +103,7 @@ jobs:
 
           semantic-release publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: publish to PYPI
         uses: pypa/gh-action-pypi-publish@release/v1
