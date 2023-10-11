@@ -66,10 +66,10 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install tox-gh-actions poetry
+          pip install tox-gh-actions
           poetry install -E doc -E dev --no-interaction
 
         # declare package_version, repo_owner, repo_name, package_name so you may use it in web hooks.
@@ -105,7 +105,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: publish to PYPI
+      - name: Publish to PYPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
